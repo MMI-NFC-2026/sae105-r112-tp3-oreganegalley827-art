@@ -94,3 +94,36 @@ Les margin négatifs à gauche et à droite corresponde à l'éespace entre le n
     flex-basis: 30vw;
   }
 }
+
+/* Défilement fluide lors du clic sur une ancre - https://developer.mozilla.org/fr/docs/Web/CSS/scroll-behavior */
+.carousel__container {
+  scroll-behavior: smooth;
+}
+
+/* Liste des ancres vers les éléments du carousel */
+.carousel__anchors {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel__anchors a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid;
+  border-radius: 50%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.carousel__anchors a:hover,
+.carousel__anchors a:focus-visible {
+  background: #000;
+  color: #fff;
+}
