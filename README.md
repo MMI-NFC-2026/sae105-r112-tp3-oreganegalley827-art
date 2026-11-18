@@ -1,6 +1,6 @@
-- nom :
-- prénom :
-- URL Netlify :
+- nom : GALLEY
+- prénom : Orégane
+- URL Netlify : https://oreganecss.netlify.app
 
 # Travail
 
