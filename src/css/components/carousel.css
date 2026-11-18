@@ -127,3 +127,44 @@ Les margin négatifs à gauche et à droite corresponde à l'éespace entre le n
   background: #000;
   color: #fff;
 }
+
+/* Titre masqué visuellement mais lu par les lecteurs d'écran */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Boutons gauche/droite positionnés sur le carousel */
+.carousel__viewport {
+  /* Sert de référence pour le positionnement absolu des boutons - https://developer.mozilla.org/fr/docs/Web/CSS/position */
+  position: relative;
+}
+
+.carousel__controls {
+  /* Les boutons sont superposés au carousel */
+  position: absolute;
+  /* Centré verticalement sur les images */
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  /* Un bouton à gauche, un bouton à droite */
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 8px;
+  /* La barre ne bloque pas le scroll à la souris, seuls les boutons sont cliquables */
+  pointer-events: none;
+}
+
+.carousel__button {
+  pointer-events: auto;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.85);
+}
